@@ -1,0 +1,11 @@
+mulet:
+    image: eliotberriot/mulet
+    volumes:
+        - /tmp/.X11-unix:/tmp/.X11-unix
+        - /dev/snd:/dev/snd
+        - ../profile:/firefox-profile
+        - $HOME/.Xauthority:/tmp/.Xauthority
+    environment:
+        - DISPLAY=unix$DISPLAY
+        - XAUTHORITY=/tmp/.Xauthority
+        - XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR

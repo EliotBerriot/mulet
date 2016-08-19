@@ -1,0 +1,9 @@
+#!/bin/bash
+
+/app/firefox/firefox-bin --no-remote --profile /firefox-profile --devtools
+
+status=$?
+if [ $status -ne 0 ]; then
+    # For some reason, sometimes, the first launch crash
+    /app/firefox/firefox-bin --no-remote --profile /firefox-profile --devtools
+fi
